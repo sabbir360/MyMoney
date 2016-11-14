@@ -1,0 +1,14 @@
+{% extends "layout/layout.html" %}
+{% block body %}
+    <ul> 
+        <p>
+            <a href="{{ url_for('printer') }}">Click here to print!</a>
+            {% if result %}
+            {% for row in result %}
+                {{row.text}} |
+                {{row.name}}
+            {% endfor %}
+            {% endif %}
+        </p>
+    </ul>
+{% endblock %}

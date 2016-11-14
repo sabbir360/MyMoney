@@ -1,0 +1,506 @@
+/*
+ * Copyright 2009 Facebook
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License. You may obtain
+ * a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
+
+body {
+  background: white;
+  color: black;
+  margin: 15px;
+  margin-top: 0;
+}
+
+body,
+input,
+textarea {
+  font-family: Georgia, serif;
+  font-size: 12pt;
+}
+
+select, input{
+  font-size: 12pt;
+  height: 25px;
+  font-family: Georgia, serif;
+  min-width: 250px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+td {
+  border: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+pre,
+code {
+  font-family: monospace;
+  color: #060;
+}
+
+pre {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid silver;
+  line-height: 14pt;
+}
+
+a,
+a code {
+  color: #00c;
+}
+
+.body {
+  margin: auto;
+}
+
+.header {
+  background-color: #3b5998;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /*margin-bottom: 1em;*/
+}
+
+.menu{
+    /*border-top: 2px solid chartreuse;*/
+    background-color: #721978;
+}
+
+.header,
+.header a {
+  color: white;
+}
+
+.header h1 a {
+  text-decoration: none;
+}
+
+.content{
+    margin-top: 1em;
+}
+
+.footer,
+.content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#footer {
+  margin-top: 3em;
+}
+
+.entry h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.entry {
+  margin-bottom: 2em;
+}
+
+.entry .date {
+  margin-top: 3px;
+}
+
+.entry p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.entry .body {
+  margin-top: 1em;
+  line-height: 16pt;
+}
+
+.compose td {
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+
+.compose td.field {
+  padding-right: 10px;
+}
+
+.compose .title,
+.compose .submit {
+  font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.compose .title {
+  font-size: 20pt;
+}
+
+.compose .title,
+.compose .markdown {
+  width: 100%;
+}
+
+.compose .markdown {
+  height: 500px;
+  line-height: 16pt;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+.error-message, .info-message{
+    display: block;
+    line-height: 28px;
+    min-height: 30px;
+    padding: 2px 10px;
+    margin-bottom: 15px;
+}
+
+.error-message{
+    background-color: red;
+    color:white;
+}
+
+.info-message{
+    background-color: green;
+    color:white;
+}
+
+.menu ul{
+   margin: 0 auto;
+   padding: 4px 0;
+}
+
+.menu ul li{
+    display: inline;
+    list-style: none outside none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.active-menu-parent{
+    /*font-weight: bold;*/
+    font-style: italic;
+    color: lime!important;
+}
+
+.active-menu, button:hover{
+    color:greenyellow!important;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+h1 a:hover{
+    font-size: 20pt;
+    color:cadetblue!important;
+    font-weight: normal;
+}
+
+input[type=submit]:hover{
+    /*background-color: black;*/
+    /*color:whitesmoke;*/
+    /*border-color: chartreuse;*/
+    font-style: italic;
+}
+
+.input-area{
+    width: 100%;
+    border-top: 1px solid #FF0000;
+    padding-top: 15px;
+}
+.input-area .left{
+    float: left;
+}
+.input-area .right{
+    widows: 49%;
+    float: right;
+}
+
+.input-area .field-container{
+    display: block;
+    padding-left: 8px;
+}
+.input-area .field-container div{
+    display: inline-block;
+}
+.input-area .field-container .label{
+    width: 15%;
+}
+.input-area .field-container label{float: right}
+.input-area .field-container .input{
+    width: 79%;
+}
+/*
+.input-area .field-container label{
+    padding-right: 5px;
+    float: left;
+    width:30%
+}
+
+.input-area .field-container input, .input-area .field-container input select{
+    float: left;
+}
+*/
+
+
+.grid .filters{
+    margin-bottom: 1em;
+}
+
+/**
+Grid CSS
+*/
+.grid .view {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #00007f;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.grid .view table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.grid .view tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.grid .view table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.grid .view table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.grid .view tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.grid .view tr:hover td{
+	
+}
+.grid .view tr:nth-child(odd){ background-color:#ffaa56; }
+.grid .view tr:nth-child(even)    { background-color:#ffffff; }.grid .view td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #00007f;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:12px;
+	font-family:Trebuchet MS;
+	font-weight:normal;
+	color:#000000;
+}.grid .view tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.grid .view tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.grid .view tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.grid .view tr:first-child td{
+		background:-o-linear-gradient(bottom, #3b5998 5%, #3b5998 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3b5998), color-stop(1, #3b5998) );
+	background:-moz-linear-gradient( center top, #3b5998 5%, #3b5998 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b5998", endColorstr="#3b5998");	background: -o-linear-gradient(top,#3b5998,3b5998);
+
+	background-color:#3b5998;
+	border:0px solid #00007f;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Comic Sans MS;
+	font-weight:bold;
+	color:#ffffff;
+}
+.grid .view tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #3b5998 5%, #3b5998 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3b5998), color-stop(1, #3b5998) );
+	background:-moz-linear-gradient( center top, #3b5998 5%, #3b5998 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b5998", endColorstr="#3b5998");	background: -o-linear-gradient(top,#3b5998,3b5998);
+
+	background-color:#3b5998;
+}
+.grid .view tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.grid .view tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.grid .view tr .center{
+    text-align: center;
+}
+
+.grid .view tr .right{
+    text-align: right;
+}
+
+
+.grid .view tr:hover{
+    background-color: #ffaa56;
+}
+.grid .view tr a:hover{
+    font-weight: normal!important;
+    font-size: 12px;
+    color: whitesmoke !important;
+    text-decoration: none;
+}
+/*End*/
+
+.grid .row{
+    display: block;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.grid .row .left, .grid .row .right{
+    width: 45%;
+    display: block;
+    float: left;
+     text-overflow: ellipsis
+    /*border: 1px solid cyan;*/
+}
+
+.grid h2{
+    font-family: "Trebuchet MS";
+    margin-bottom: 5px;
+    border-bottom: 1px solid chocolate;
+}
+
+.grid .row .container {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 11px;
+}
+
+.grid .row .container .label {
+    border-right: 1px solid red;
+    display: inline;
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+.grid .row .container .value{
+    display: inline;
+}
+
+.loading {
+    background-color: greenyellow;
+    display: none;
+    margin-left: 42%;
+    position: fixed;
+    text-align: center;
+    width: 100px;
+}
+
+.view td a.add{
+    background: url('../images/box_add.png') no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+textarea{vertical-align: middle}
+
+.view .inner-container{width: 100%;
+padding-top: 5px;
+}
+
+.view .inner-container .inner-label, .view .inner-container .inner-content{
+    display: inline-block;
+}
+
+.view .inner-container .inner-label{
+    text-align: right;
+    padding-right: 3px;
+    border-right: 1px solid cadetblue;
+}
+
+.display-none{
+    display: none;
+}
+
+
+pre.success {
+    background: none repeat scroll 0 0 grey;
+    color: white;
+}
+
+pre.error {
+    background: none repeat scroll 0 0 #000000;
+    color: red;
+}
+
+.command_content{padding-bottom: 20px}
+
+
+form span.error{color:red}
+
+/**
+* Grid Pagination
+*/
+
+.view .pagination{
+    border-top: 1px solid darkmagenta;
+    text-align: center;
+}
+
+.view .pagination div{
+    font-family: "Trebuchet MS";
+    display: inline;
+}
+
+.view .pagination .page-rows select{
+    text-align: right;
+    min-width: 30px !important;
+}

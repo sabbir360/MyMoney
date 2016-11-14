@@ -1,0 +1,22 @@
+{% extends 'layout/aws.html' %}
+{% block body %}
+
+    <div class="container-fluid text-container" style="max-width: 400px">
+        <h3>{{ title }}</h3>
+        <form class="form-signin" role="form" method="post" action="{{   url_for("r_home_login") }}?next={{ request.values.get("next") or "/" }}">
+
+            <div class="form-group">
+                {{ form.username(placeholder=form.username.label.text, class="form-control") }}
+                {{render_error(form.username) }}
+            </div>
+            <div class="form-group">
+                {{ form.password(placeholder=form.password.label.text, class="form-control")}}
+                {{render_error(form.password) }}
+            </div>
+
+
+            <button type="submit" class="btn btn-default">Login</button>
+        </form>
+    </div>
+
+{% endblock %}

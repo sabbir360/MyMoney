@@ -1,0 +1,44 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}">
+{#        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slickNav/slicknav.css') }}">#}
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.0.0.min.js') }}"></script>
+{#        <script type="text/javascript" src="{{ url_for('static', filename='js/slickNav/jquery.slicknav.min.js') }}"></script>#}
+        <script type="text/javascript" src="{{ url_for('static', filename='js/sweetCore.js') }}"></script>
+
+        <title>{{ title or 'amazonCpanel'}}</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='static/favicon.ico') }}"/>
+
+        {% block head %}{% endblock %}
+    </head>
+    <body>    
+        <div class="body">
+            <div class="loading">Loading...</div>
+            {#<div class="header">
+                <div class="float-right">
+                    {% if session.username %}
+                        <div style="display: inherit"><a href="/logout">Logout ({{ session.username }})</a></div>
+                    {% endif %}
+                </div>
+            <h1><a href="/">amazonCPanel</a></h1>
+            </div>#}
+
+            {% block menu %}
+
+
+
+            {% endblock %}
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message|safe }}</div>
+            {% endfor %}
+            {% macro render_error(field) %}
+                {% if field.errors %}
+                    {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
+                {% endif %}
+            {% endmacro %}
+            <div class="content">{% block body %}{% endblock %}</div>
+        </div>
+    </body>
+</html>

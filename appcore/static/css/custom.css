@@ -1,0 +1,182 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.text-container{
+    padding-top: 10px;
+}
+
+.loading {
+    background-color: #ffff00;
+    display: none;
+    margin-left: 42%;
+    position: fixed;
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+}
+
+a.add{
+    background: url('../images/box_add.png') no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.search-adjust{
+    text-align: right;
+}
+
+/**
+<!-- Loading -->
+**/
+
+.loadingProgressGHolder{
+width:310px;
+height:10px;
+overflow:hidden;
+background-color:#910391;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+-ms-border-radius:4px;
+-o-border-radius:4px;
+border-radius: 4px;
+margin-top: 4px;
+}
+.loadingProgressG{
+background-color:#F59505;
+margin-top:0;
+margin-left:-310px;
+-moz-animation-name:bounce_loadingProgressG;
+-moz-animation-duration:1.3s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:linear;
+-webkit-animation-name:bounce_loadingProgressG;
+-webkit-animation-duration:1.3s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-ms-animation-name:bounce_loadingProgressG;
+-ms-animation-duration:1.3s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-timing-function:linear;
+-o-animation-name:bounce_loadingProgressG;
+-o-animation-duration:1.3s;
+-o-animation-iteration-count:infinite;
+-o-animation-timing-function:linear;
+animation-name:bounce_loadingProgressG;
+animation-duration:1.3s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+width:310px;
+height:24px;
+}
+
+@-moz-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-310px;
+}
+
+100%{
+margin-left:310px;
+}
+
+}
+
+@-webkit-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-310px;
+}
+
+100%{
+margin-left:310px;
+}
+
+}
+
+@-ms-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-310px;
+}
+
+100%{
+margin-left:310px;
+}
+
+}
+
+@-o-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-310px;
+}
+
+100%{
+margin-left:310px;
+}
+
+}
+
+@keyframes bounce_loadingProgressG{
+0%{
+margin-left:-310px;
+}
+
+100%{
+margin-left:310px;
+}
+
+}
+
+/**
+<!-- end progress -->
+**/
+
+/**
+    pre error on command execution
+*/
+
+.display-none{
+    display: none;
+}
+
+
+pre.success {
+    background: none repeat scroll 0 0 grey;
+    color: white;
+}
+
+pre.error {
+    background: none repeat scroll 0 0 #000000;
+    color: red;
+}
+
+.command_content{padding-bottom: 20px}
+
+
+/**
+ GRID
+**/
+.table-responsive a{
+    color: #c12e2a;
+}
+.table-responsive tr:hover{
+    background-color: #eee;
+    /*color: #ff0200;*/
+}
+
+.table-responsive thead tr:hover{
+    background-color: #006600;
+    color: #ffffff;
+}
+
+.table-responsive tr a:hover{
+    font-weight: normal!important;
+    /*font-size: 12px;*/
+    color: #2924f5 !important;
+    text-decoration: none;
+}
+
+.form-group .error {
+    color: red;
+}
