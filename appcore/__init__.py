@@ -2,23 +2,10 @@
 Init of the app
 '''
 
-__author__ = 'Sabbir'
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
-from appcore.helpers.configs import *
+from appcore.urls import APPLICATION
 from appcore.helpers.Extends import FrameExtends, ModelHelper
 
-from appcore.controllers import HomeController
-#  from appcore.helpers.database import db_session
-
-
-APPLICATION = Flask('appcore')
-APPLICATION.config['SECRET_KEY'] = SECURITY_KEY
-APPLICATION.config['SQLALCHEMY_DATABASE_URI'] = DB_CONFIG
-APPLICATION.config['SQLALCHEMY_ECHO'] = DEBUG_MODE
-APPLICATION.debug = DEBUG_MODE
-from appcore.urls import *
 DB = SQLAlchemy(APPLICATION)
 CONNECTION = DB.engine.connect()
 

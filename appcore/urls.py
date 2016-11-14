@@ -3,12 +3,19 @@ URL Builder
 '''
 
 __author__ = 'Sabbir'
-from appcore import APPLICATION
-#  from flask import request
+
+from flask import Flask, session, redirect
+from appcore.helpers.configs import SECURITY_KEY, DB_CONFIG, DEBUG_MODE
+from appcore.controllers import HomeController
+#  from appcore.helpers.database import db_session
 
 
-from appcore.controllers.HomeController import HOME_CONTROLLER
-from flask import session, redirect
+APPLICATION = Flask('appcore')
+APPLICATION.config['SECRET_KEY'] = SECURITY_KEY
+APPLICATION.config['SQLALCHEMY_DATABASE_URI'] = DB_CONFIG
+APPLICATION.config['SQLALCHEMY_ECHO'] = DEBUG_MODE
+APPLICATION.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+APPLICATION.debug = DEBUG_MODE
 
 
 #  home page
@@ -17,7 +24,7 @@ def r_home_index():
     """
     Home route
     """
-    return HOME_CONTROLLER.index()
+    return HomeController.HOME_CONTROLLER.index()
 
 
 #  login page
@@ -26,7 +33,7 @@ def r_home_login():
     """
     Login route
     """
-    return HOME_CONTROLLER.login()
+    return HomeController.HOME_CONTROLLER.login()
 
 
 @APPLICATION.route("/logout")

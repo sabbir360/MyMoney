@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from appcore.helpers.configs import DB_CONFIG
 
-ENGINE = create_engine(DB_CONFIG, convert_unicode=True, echo=True)
+ENGINE = create_engine(DB_CONFIG, convert_unicode=True, echo=False)
 
 
 DB_SESSION = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=ENGINE))

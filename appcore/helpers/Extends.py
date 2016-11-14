@@ -26,7 +26,9 @@ class ModelHelper():
     def __init__(self):
         pass
 
+    '''
     @staticmethod
     def get_batch_combo():
         from appcore.models.InstanceBatch import InstanceBatch
         return InstanceBatch().combo()
+    '''
